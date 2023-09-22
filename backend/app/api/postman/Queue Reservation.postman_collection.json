@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "457e2f66-5e39-407c-a898-1d6b8a7970c7",
+		"name": "Queue Reservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27418694"
+	},
+	"item": [
+		{
+			"name": "Initialize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTEwMzkwOTIsImlhdCI6MTY5MTAzOTAzMiwiaWQiOiIiLCJpc3MiOiJhc2FwaC1iYWNrZW5kIiwianRpIjoiMzAwZTQxNTMtM2EyNC00Y2JiLTk1ZTMtZDVjNTY3ODNiZTVjIiwicm9sZSI6ImFueXRoaW5nIHN1Y2sgYXMgKGJ1eWVyIHNhbGVyKSIsInN1YiI6ImFjY2Vzc190b2tlbiJ9.ZR3ExB_q8JSZ6nAn601Ys_XAJE9MVmRYUxT1T2sIJIPEa6_lioEPqitiqrTA5hbi_ffHcL9zUFzP8zWzDfWftYqXWfA74kKII-gEAcitQJqn7qmT_va7XJeZ6zfbuLnaBaHyEThKdexuZjNDad86p31lYPqAklvUAnxRr00JcfydGiiql57tII_lnjL8apYMX946JiSxpYEUdsli7-7KjdbofAmAONqx5paqRLsnyKQ4m7vURLC8LOxJ5sOd0vHTR2vuuPpkXUJWqhgxGzuH_zq_zoxSiBxDyD4TEtTsdkfdpr-U7gJ8T0PNiMKU9CnCN0H43Vv1trJzqehgDKCwEw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/restaurants/:restaurant_id/branchs/:branch_id/tables/initialize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						":restaurant_id",
+						"branchs",
+						":branch_id",
+						"tables",
+						"initialize"
+					],
+					"variable": [
+						{
+							"key": "restaurant_id",
+							"value": "1"
+						},
+						{
+							"key": "branch_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number_of_customers\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/restaurants/:restaurant_id/branchs/:branch_id/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						":restaurant_id",
+						"branchs",
+						":branch_id",
+						"bookings"
+					],
+					"variable": [
+						{
+							"key": "restaurant_id",
+							"value": "1"
+						},
+						{
+							"key": "branch_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Booking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/restaurants/:restaurant_id/branchs/:branch_id/bookings/:booking_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						":restaurant_id",
+						"branchs",
+						":branch_id",
+						"bookings",
+						":booking_id"
+					],
+					"variable": [
+						{
+							"key": "restaurant_id",
+							"value": "1"
+						},
+						{
+							"key": "branch_id",
+							"value": "1"
+						},
+						{
+							"key": "booking_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
